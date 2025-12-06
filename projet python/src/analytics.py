@@ -1,4 +1,3 @@
-
 import math
 from collections import Counter
 
@@ -8,6 +7,7 @@ def tokenize(text):
     #Tout en minuscule + on garde seulement les lettres.
 
     import re
+    #retourn expression régulière (regex) qui rendre les mots en francais 
     return re.findall(r"[a-zàâçéèêëîïôûùüÿñæœ]+", text.lower())
 
 
