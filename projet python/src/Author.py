@@ -1,4 +1,4 @@
-# src/Author.py
+
 class Author:
     def __init__(self, name):
         self.name = name
@@ -11,4 +11,6 @@ class Author:
 
     def __str__(self):
         return f"{self.name} — {self.ndoc} docs"
+
+
 
