@@ -30,8 +30,9 @@ doc2 = factory.create(
 corpus.add_doc(doc1)
 corpus.add_doc(doc2)
 
-# moteur de recherche relié
+# moteur de recherche relie
 engine = SearchEngine(corpus)
 
 print("Recherche 'test' :", engine.search("test"))
 print("Concordancier ('deep') :\n", corpus.concorde("deep"))
+
