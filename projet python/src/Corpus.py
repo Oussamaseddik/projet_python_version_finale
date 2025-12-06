@@ -1,4 +1,4 @@
-# src/Corpus.py
+
 import pandas as pd
 import re
 from src.Author import Author
@@ -34,9 +34,8 @@ class Corpus:
         return self.full_text
 
     def search(self, query):
-        """
-        Retourne liste de tuples (doc_id, Document) si query substring dans texte (case-insensitive).
-        """
+        
+        #Retourne liste de tuples (doc_id, Document) si query substring dans texte .
         if not query:
             return []
         q = query.lower()
@@ -63,10 +62,10 @@ class Corpus:
         df.to_csv(path, sep="\t", index=False)
 
     def load_from_dataframe(self, df):
-        """
-        df attendu : colonnes speaker,text,date,descr,link (comme ton CSV)
-        découpe chaque 'text' en phrases et ajoute au corpus.
-        """
+    
+        #df attendu : colonnes speaker,text,date,descr,link 
+       # découpe chaque 'text' en phrases et ajoute au corpus.
+       
         for _, row in df.iterrows():
             speaker = row.get("speaker", "Unknown")
             date = row.get("date", "")
