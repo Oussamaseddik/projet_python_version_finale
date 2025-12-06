@@ -1,0 +1,6 @@
+# Bibliothèques standard utilisées :
+ math, collections, re, json, os
+
+# Bibliothèques externes utilisées dans le notebook :
+pandas
+matplotlib
