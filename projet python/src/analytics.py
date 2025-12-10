@@ -7,6 +7,7 @@ def tokenize(text):
     #Tout en minuscule + on garde seulement les lettres.
 
     import re
+    
     #retourn expression régulière (regex) qui rendre les mots en francais 
     return re.findall(r"[a-zàâçéèêëîïôûùüÿñæœ]+", text.lower())
 
@@ -50,7 +51,7 @@ def compute_tfidf(corpus):
 
         tfidf_doc = {}
         for t, count in tf.items():
-            tfidf_doc[t] = (count / total) * idf.get(t, 0)
+             tfidf_doc[t] = (count / total) * idf.get(t, 0)
 
         tfidf_all[doc_id] = Counter(tfidf_doc)
 
@@ -68,4 +69,5 @@ def top_terms(corpus, k=20):
         agg.update(scores)
 
     return agg.most_common(k)
+
 
