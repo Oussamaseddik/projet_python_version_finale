@@ -7,10 +7,12 @@ class Author:
 
     def add(self, doc_id, doc):
         self.production[doc_id] = doc
+
         self.ndoc += 1
 
     def __str__(self):
         return f"{self.name} — {self.ndoc} docs"
+
 
 
 
