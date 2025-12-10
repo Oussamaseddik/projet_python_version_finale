@@ -9,9 +9,11 @@ factory = DocumentFactory()
 
 # ajouter des documents
 doc1 = factory.create(
-    source="reddit",
+    
+    source= "reddit",
     titre="Hello World",
     auteur="Alice",
+    
     date="2024",
     url="http://reddit.com",
     texte="Ceci est un test reddit avec un moteur de recherche.",
@@ -21,7 +23,8 @@ doc1 = factory.create(
 doc2 = factory.create(
     source="arxiv",
     titre="Deep Learning",
-    auteurs=["Bob", "Charlie"],
+    
+auteurs=["Bob", "Charlie"],
     date="2023",
     url="http://arxiv.org",
     texte="Cet article parle de deep learning et intelligence artificielle."
@@ -35,4 +38,5 @@ engine = SearchEngine(corpus)
 
 print("Recherche 'test' :", engine.search("test"))
 print("Concordancier ('deep') :\n", corpus.concorde("deep"))
+
 
