@@ -22,3 +22,4 @@ class ArxivDocument(Document):
         super().__init__(titre, ", ".join(auteurs), date, url, texte, source="arxiv")
         self.coauthors = auteurs
 
+
