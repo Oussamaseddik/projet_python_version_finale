@@ -1,5 +1,5 @@
 
-class SearchEngine:
+class  SearchEngine:
             # Initialise le moteur 
     def __init__(self, corpus):
         self.corpus = corpus
@@ -7,5 +7,8 @@ class SearchEngine:
     def search(self, query, limit=None):
         res = self.corpus.search(query)
         if limit:
+
+            
             return res[:limit]
         return res
+
