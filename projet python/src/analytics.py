@@ -29,7 +29,7 @@ def build_df(corpus):
     N = corpus.taille()
 
     for _, doc in corpus.id2doc.items():
-        terms = set(tokenize(doc.texte))  # un mot compte 1 fois par document
+        terms = set(tokenize(doc.texte))  
         df.update(terms)
 
     return df, N
@@ -37,8 +37,6 @@ def build_df(corpus):
 
 def compute_tfidf(corpus):
 
-    #Calcule TF-IDF pour chaque document du corpus.
-    #Retourne un dict : doc_id -> Counter(term -> TF-IDF)
     
     df, N = build_df(corpus)
     tfidf_all = {}
@@ -69,5 +67,6 @@ def top_terms(corpus, k=20):
         agg.update(scores)
 
     return agg.most_common(k)
+
 
 
