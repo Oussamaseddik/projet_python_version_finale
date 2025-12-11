@@ -7,8 +7,9 @@ from src.Document import Document
 class Corpus:
     def __init__(self, nom="Corpus"):
         self.nom = nom
-        self.id2doc = {}   # {id: Document}
-        self.authors = {}  # {author_name: Author}
+        self.id2doc = {}  
+        self.authors = {} 
+        
         self.ndoc = 0
         self.full_text = None
 
@@ -16,11 +17,11 @@ class Corpus:
         doc_id = self.ndoc
         self.id2doc[doc_id] = doc
         self.ndoc += 1
-        # auteurs
+        
         if doc.auteur not in self.authors:
             self.authors[doc.auteur] = Author(doc.auteur)
         self.authors[doc.auteur].add(doc_id, doc)
-        # invalidate full_text cache
+        
         self.full_text = None
         return doc_id
 
@@ -84,3 +85,4 @@ class Corpus:
                         texte=p
                     )
                     self.add_doc(doc)
+
