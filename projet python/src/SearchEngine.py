@@ -1,6 +1,6 @@
 
 class  SearchEngine:
-            # Initialise le moteur 
+          
     def __init__(self, corpus):
         self.corpus = corpus
   # Cherche les documents correspondant à la requete et limite le nombre si demande
@@ -11,4 +11,5 @@ class  SearchEngine:
             
             return res[:limit]
         return res
+
 
