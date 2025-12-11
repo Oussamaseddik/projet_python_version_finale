@@ -3,11 +3,11 @@ from Document import Document
 from factory import DocumentFactory
 from SearchEngine import SearchEngine
 
-# créer corpus
+
 corpus = Corpus("TestCorpus")
 factory = DocumentFactory()
 
-# ajouter des documents
+
 doc1 = factory.create(
     
     source= "reddit",
@@ -33,11 +33,12 @@ auteurs=["Bob", "Charlie"],
 corpus.add_doc(doc1)
 corpus.add_doc(doc2)
 
-# moteur de recherche relie
+
 engine = SearchEngine(corpus)
 
 print("Recherche 'test' :", engine.search("test"))
 print("Concordancier ('deep') :\n", corpus.concorde("deep"))
+
 
 
 
