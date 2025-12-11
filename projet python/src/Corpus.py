@@ -72,8 +72,9 @@ class Corpus:
             date = row.get("date", "")
             url = row.get("link", "")
             full_text = str(row.get("text", ""))
-            # split naïf en phrases
-            phrases = full_text.split(".")
+
+            
+             phrases = full_text.split(".")
             for p in phrases:
                 p = p.strip()
                 if len(p) > 10:
@@ -85,4 +86,5 @@ class Corpus:
                         texte=p
                     )
                     self.add_doc(doc)
+
 
