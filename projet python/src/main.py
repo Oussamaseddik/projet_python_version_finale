@@ -1,3 +1,4 @@
+#Script principal illustrant l’utilisation complete du projet.
 from Corpus import Corpus
 from Document import Document
 from factory import DocumentFactory
@@ -7,7 +8,7 @@ from SearchEngine import SearchEngine
 corpus = Corpus("TestCorpus")
 factory = DocumentFactory()
 
-
+# Fabrique pour creer les documents
 doc1 = factory.create(
     
     source= "reddit",
@@ -25,7 +26,8 @@ doc2 = factory.create(
     titre="Deep Learning",
     
 auteurs=["Bob", "Charlie"],
-    date="2023",
+    
+     date="2023",
     url="http://arxiv.org",
     texte="Cet article parle de deep learning et intelligence artificielle."
 )
@@ -38,6 +40,7 @@ engine = SearchEngine(corpus)
 
 print("Recherche 'test' :", engine.search("test"))
 print("Concordancier ('deep') :\n", corpus.concorde("deep"))
+
 
 
 
